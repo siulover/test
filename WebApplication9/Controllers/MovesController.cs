@@ -19,6 +19,19 @@ namespace WebApplication9.Controllers
         {
             return View(db.Moves.ToList());
         }
+        
+        public ActionResult SearchMove(string title)
+        {
+            
+            if (!String.IsNullOrEmpty(title))
+            {
+               var moves= from m in db.Moves
+                            where m.Title.Contains(title)
+                            select m;
+                return View("Index", moves);
+            }
+            return View("Index");
+        }
 
         // GET: Moves/Details/5
         public ActionResult Details(int? id)

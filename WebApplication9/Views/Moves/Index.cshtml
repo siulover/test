@@ -10,6 +10,10 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+  @using (@Html.BeginForm("SearchMove","Moves",FormMethod.Get) ) {
+     <p> 电影标题:@Html.TextBox("title") <input type="submit" value="查找" /> </p>
+  }
 <table class="table">
     <tr>
         <th>
