@@ -11,5 +11,6 @@ namespace WebApplication9.Models
         [Key]
         public int TypeId { get; set; }
         public string TypeName { set; get; }
+        public string Geric { get; set; }
     }
 }
