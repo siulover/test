@@ -131,6 +131,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -154,8 +155,17 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\MovesController.cs" />
     <Compile Include="Controllers\MoveTypesController.cs" />
+    <Compile Include="Controllers\TestLoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251505281_DataAnnotations.cs" />
+    <Compile Include="Migrations\201705251505281_DataAnnotations.Designer.cs">
+      <DependentUpon>201705251505281_DataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705251508291_testCF.cs" />
+    <Compile Include="Migrations\201705251508291_testCF.Designer.cs">
+      <DependentUpon>201705251508291_testCF.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Move.cs" />
@@ -186,6 +196,8 @@
     <Content Include="Views\MoveTypes\Details.cshtml" />
     <Content Include="Views\MoveTypes\Edit.cshtml" />
     <Content Include="Views\MoveTypes\Index.cshtml" />
+    <Content Include="Views\TestLogin\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutLg.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -195,6 +207,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705251505281_DataAnnotations.resx">
+      <DependentUpon>201705251505281_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251508291_testCF.resx">
+      <DependentUpon>201705251508291_testCF.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
