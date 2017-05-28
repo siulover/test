@@ -17,6 +17,7 @@ namespace WebApplication9
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                ,namespaces: new string[] { "WebApplication9.Controllers" }
             );
             
         }

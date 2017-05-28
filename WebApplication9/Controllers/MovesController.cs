@@ -118,7 +118,7 @@ namespace WebApplication9.Controllers
         }
 
         // POST: Moves/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]//由于两个删除如果都用delete来表示，参数相同，无法重载，只能换名字，再通过ActionName来确定Action的名字
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {

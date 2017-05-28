@@ -46,6 +46,7 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
+            <!--超链接默认的采用的是Get方法如果需要用Post方法需要以onclick提交方式调用Action-->
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
