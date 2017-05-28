@@ -18,11 +18,11 @@ namespace WebApplication9.Models
 
 
         [Display(Name = "上映时间")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date,ErrorMessage ="必须为时间类型")]
         [DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}",ApplyFormatInEditMode =true)]
-        [Required]
+        [Required(ErrorMessage ="上映时间不能为空")]
         public DateTime ReleaseDate { get; set; }
-        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$",ErrorMessage ="只能以字母开头")]
         public string Genre { set; get; }
 
         public decimal Price { get; set; }

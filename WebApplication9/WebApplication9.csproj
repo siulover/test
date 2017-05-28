@@ -172,6 +172,7 @@
     <Content Include="Views\Default\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Test\Controllers\HomeController.cs" />
     <Compile Include="Areas\Test\TestAreaRegistration.cs" />
@@ -194,6 +195,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Move.cs" />
     <Compile Include="Models\MoveType.cs" />
+    <Compile Include="Models\MyActionFilterAttribute.cs" />
+    <Compile Include="Models\MyExceitionFilterAttribute.cs" />
     <Compile Include="Models\WebapplicationDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

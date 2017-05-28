@@ -15,11 +15,13 @@ namespace WebApplication9.Controllers
         private WebapplicationDbContext db = new WebapplicationDbContext();
 
         // GET: Moves
+        [AllowAnonymous]//该标识用来标识这个Action不需要受Authorization过滤器过滤。
         public ActionResult Index()
         {
             return View(db.Moves.ToList());
         }
         
+        //[MyActionFilter(Name ="测试在Action中设置过滤器")]，该属性是用来标识Action需要被MyActionFilter过滤器过滤。
         public ActionResult SearchMove(string title)
         {
             
@@ -93,6 +95,7 @@ namespace WebApplication9.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Title,ReleaseDate,Genre,Price")] Move move)
         {
+            //数据的校验是否通过。
             if (ModelState.IsValid)
             {
                 db.Entry(move).State = System.Data.Entity.EntityState.Modified;
