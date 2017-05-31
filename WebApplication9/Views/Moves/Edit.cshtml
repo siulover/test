@@ -1,13 +1,13 @@
 ﻿@model WebApplication9.Models.Move
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit1";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Edit</h2>
 
-
+<!--form的Action未指定的情况下，默认是提交当前的URL，提交方法为Post-->
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()

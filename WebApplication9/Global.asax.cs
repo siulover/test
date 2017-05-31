@@ -13,6 +13,8 @@ namespace WebApplication9
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //默认全局过滤器没有在全局配置文件中注册。
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
         }
     }
 }
