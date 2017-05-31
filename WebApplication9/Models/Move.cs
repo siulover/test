@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace WebApplication9.Models
 {
@@ -25,7 +25,6 @@ namespace WebApplication9.Models
         [DataType(DataType.Date,ErrorMessage ="必须为时间类型")]
         [DisplayFormat(DataFormatString ="{0:yyyy-MM-dd}",ApplyFormatInEditMode =true)]
         [Required(ErrorMessage ="上映时间不能为空")]
-        [Required]
         public DateTime ReleaseDate { get; set; }
         [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$",ErrorMessage ="只能以字母开头")]
         public string Genre { set; get; }
