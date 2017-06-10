@@ -2,7 +2,28 @@
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8" />
+    <!--这是个是IE8的专用标记,用来指定IE8浏览器去模拟某个特定版本的IE浏览器的渲染方式(比如人见人烦的IE6)，以此来解决部分兼容问题，例如模拟IE7的具体方式如下：
+< meta http-equiv = "X-UA-Compatible" content = "IE=EmulateIE7" /> 最基本的用法：在页面的头部加入
+1、< meta http-equiv = "X-UA-Compatible" content = "chrome=1" >
+        通过修改HTTP头文件的方法来实现让指定的页面使用GCF内核进行渲染：
+在HTTP的头文件中加入以下信息：X-UA-Compatible: chrome=1
+在Apache服务器中，确保 mod_headers 和 mod_setenvif文件可用，然后在httpd.conf中加入以下配置信息：
+< IfModule mod_setenvif.c>
+< IfModule mod_headers.c>
+BrowserMatch chromeframe gcf
+Header append X-UA-Compatible "chrome=1" env=gcf
+2、在IIS7或者更高版本的服务器中，只需要修改web.config文件,添加如下信息即可即可:
+< configuration >
+< system.webServer >
+< httpProtocol >
+< customHeaders >
+< add name = "X-UA-Compatible" value = "chrome=1" />
+</ customHeaders >
+</ httpProtocol >
+</ system.webServer >
+</ configuration >-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--设置页面在设备上的宽度与设备相匹配，把页面宽度设置为设备宽度，初始化的缩放为1， 并没有禁止缩放-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>@ViewBag.Title - My ASP.NET Application</title>

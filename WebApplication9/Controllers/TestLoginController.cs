@@ -11,7 +11,7 @@ namespace WebApplication9.Controllers
         // GET: TestLogin
         public ActionResult Index()
         {
-            return View();
+            return View("t2");
         }
     }
 }

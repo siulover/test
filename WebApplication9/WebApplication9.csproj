@@ -227,6 +227,7 @@
     <Content Include="Views\TestLogin\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLg.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\TestLogin\t2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
